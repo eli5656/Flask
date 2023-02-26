@@ -20,6 +20,7 @@ class test(unittest.TestCase):
         url = driver.current_url
         name_in_url = url[url.find("username=") + len("username="):]
         self.assertEqual(fullname, name_in_url, "name of url and name in DOM is not same")
+        driver.quit();
 
 
 if __name__ == "__main__":
